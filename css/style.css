@@ -1,0 +1,451 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: Gilroy;
+  font-display: swap;
+  src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-display: swap;
+  src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-display: swap;
+  src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-display: swap;
+  src: url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+[class*=_icon-]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*=_icon-]:before {
+  display: block;
+}
+
+._icon-arrow-down:before {
+  content: "\e900";
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #000;
+  line-height: 1;
+  font-family: "Gilroy";
+  font-size: 1rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Gilroy";
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.lock body {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+
+[class*=__container] {
+  max-width: 79.375rem;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+[class*=-ibg] {
+  position: relative;
+}
+
+[class*=-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+[class*=-ibg_contain] img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.menu__link {
+  color: #000;
+  font-size: 1.125rem;
+}
+
+.menu__link:hover {
+  text-decoration: underline;
+}
+
+.menu__sub-list {
+  top: 100%;
+  position: absolute;
+  min-width: 180px;
+  right: 0;
+  padding: 15px;
+  background-color: #000;
+}
+
+.menu__sub-list li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.menu__sub-link {
+  color: #fff;
+}
+.active .sub {
+	z-index: 1000;
+}
+
+.menu__sub-link:hover {
+  text-decoration: underline;
+}
+
+#map{
+	position: relative;
+}
+.menu__list{
+	
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+._icon-arrow-down{
+	font-size: 12px;
+}
+
+body .menu__list > li.active .menu__sub-list {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  pointer-events: all;
+}
+
+body .menu__list > li.active ._icon-arrow-down {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+body .menu__sub-list > li.active ._icon-arrow-down {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+body .menu__sub-list > li.active .sub {
+  margin-top: -0.9375rem;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+	z-index: 5000;
+}
+
+body .menu__list > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 200px;
+}
+
+.menu__list{
+	width: 500px;
+}
+
+body .menu__link {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+body .menu__arrow {
+  display: block;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+	margin-right: 8px;
+}
+
+body .menu__list > li.active .menu__object-list {
+	-webkit-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	transform: translate(0px, 0px);
+	display: none;
+}
+
+body .menu__list > li.active .menu__object-list.selected {
+	-webkit-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	transform: translate(0px, 0px);
+	display:block;
+}
+
+.sub {
+  position: absolute;
+  top: 0;
+  left: 185px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transform: translate(0, 10%);
+      -ms-transform: translate(0, 10%);
+          transform: translate(0, 10%);
+}
+.menu__item{
+	border-radius: 10px;
+}
+.menu__sub-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__sub-item .menu__sub-list {
+	border-radius: 0px 10px 10px 0px;
+  margin-top: 0;
+  background-color: silver;
+}
+
+
+
+.menu__sub-item .menu__sub-list .menu__sub-link {
+  color: #000;
+}
+.menu__arrow:first-child{
+	padding-right: 55px;
+}
+.menu__sub-item ._icon-arrow-down {
+  color: white;
+}
+
+.back{
+	background-color: #000;
+}
+
+.second{
+	position: absolute;
+	top: 0;
+	left: 210px;
+	min-width: 220px;
+	float: right;
+}
+
+.menu__object{
+  font-size: 18px;
+}
+
+.menu__object:hover{
+	text-decoration: underline;
+}
+
+.menu__list {
+	gap: 20px;
+	color: white;
+}
+.menu__link{
+	padding: 15px;
+	color: white;
+}
+.menu__list > li {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.menu__list > li.active .menu__sub-list {
+  display: block;
+}
+
+.menu__link {
+  font-size: 24px;
+}
+
+.menu__sub-link {
+  font-size: 20px;
+  color: white;
+}
+
+.menu__sub-list {
+  display: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  position: relative;
+  background-color: #000;
+}
+
+.map {
+  width: 700px;
+  margin-top: 12.5rem;
+  margin-left: 400px;
+  height: 18.75rem;
+}
+.di{
+	display: flex;
+}
+
+.menu__list {
+  z-index: 40;
+}
+
+
+.ymaps-2-1-79-controls__control_toolbar .ymaps-2-1-79-user-selection-none{
+	display: none;
+}
+
+.ymaps-2-1-79-searchbox-input__input[placeholder] {
+	display: none;
+	text-overflow: ellipsis;
+}
+
+.ymaps-2-1-79-controls-pane *, .ymaps-2-1-79-searchpanel-pane * {
+	display: none;
+	text-align: left;
+}

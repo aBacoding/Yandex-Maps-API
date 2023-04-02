@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<location>
+    <lat>40.7127</lat> <!--New York North-->
+    <lon>-74.0059</lon> <!--New York East-->
+    <lat1>51.5074</lat1> <!--London North-->
+    <lon1>-0.1278</lon1> <!--London East-->
+    <lat2>50.4504</lat2> <!--Kiev North-->
+    <lon2>30.5234</lon2> <!--Kiev East-->
+		<lat3>51.0908</lat3> <!--Astana EXPO 2017 North-->
+    <lon3>71.4142</lon3> <!--Astana EXPO 2017 East-->
+		<lat4>59.9375</lat4> <!--Saint Peterburg North-->
+    <lon4>30.3086</lon4> <!--Saint Peterburg East-->
+		<lat5>43.6511</lat5> <!--Toronto North-->
+    <lon5>-79.3470</lon5> <!--Toronto East-->
+    <zoom>15</zoom>
+</location>
